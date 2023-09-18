@@ -41,18 +41,18 @@ function App() {
       <p style={{visibility: isActive ? "hidden" : "visible"}}><strong>Are you excited to be able to experience this piece of art?</strong></p>
 
       <p style={{visibility: isActive ? "hidden" : "visible"}}>
-        This art is interactive in many ways. However,
+        This art is interactive in many ways. You must find a link to the next page. However,
       </p>
       <p style={{visibility: isActive ? "hidden" : "visible", fontSize:"8px"}}>no help will be provided because</p>
       <p style={{visibility: isActive ? "hidden" : "visible", fontSize:"4px"}}>you must find the exit on your own</p>
-      <a style={{visibility: isActive ? "hidden" : "visible", fontSize:".25px", color: "black"}} href="https://ohrtann19.github.io/errorfail/">
+      <a style={{visibility: isActive ? "hidden" : "visible", fontSize:".25px", color: "black"}} href="https://ohrtann19.github.io/epicfail/">
         You found a magnification exit!
       </a>
-      <p style={{visibility: isActive ? "hidden" : "visible", marginBottom:"0px"}}>If you woud prefer to access it in the dark:</p>
+      <p style={{visibility: isActive ? "hidden" : "visible", marginBottom:"0px"}}>Continue exploring in the dark:</p>
 
       
-      <button style={{visibility: isActive ? "hidden" : "visible"}} onClick={handleClick}>Turn Off the Light</button>
-      <a onFocus={handleLinkClick} style={{visibility: isActive ? "visible" : "hidden", color: linkActive ? "white" : "black"}} href="https://ohrtann19.github.io/errorfail/">{displayLightText}</a>
+      <button style={{visibility: isActive ? "hidden" : "visible"}} onClick={handleClick}>Turn Off the Lights</button>
+      <a onFocus={handleLinkClick} style={{visibility: isActive ? "visible" : "hidden", color: linkActive ? "white" : "black"}} href="https://ohrtann19.github.io/epicfail/">{displayLightText}</a>
     </div>
   );
 }
