@@ -7,7 +7,7 @@ env:
 
 on:
   push:
-    branches: [ "main", "workflow" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -28,13 +28,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    # change "homepage" in package.json with current repository name
-    - run: touch repository.txt
-    - run: echo ${{ github.repository }} >> repository.txt
-    - run: sed -i 's/.*\///' repository.txt
-    - run: |
-        sed -i "s/homepage.*/homepage\": \"$(sed 's@[/\&]@\\&@g;$!s/$/\\/' repository.txt)\",/g" package.json
-    - run: rm repository.txt
     - run: npm install
     - run: npm run build
     - name: Deploy
